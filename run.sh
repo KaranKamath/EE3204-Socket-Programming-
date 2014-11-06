@@ -1,3 +1,6 @@
-./server $1 &
-./client localhost $1
-killall -v ./server
+for i in 1 2 3 4 5
+do
+	./server $i &
+	./client localhost $i
+	killall -v ./server
+done
